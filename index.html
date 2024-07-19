@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Btwo Tech</title>
+    <link rel="shortcut icon" href="favicon/favicon-02.png" type="image/png">
+    <link href="/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navegation">
+        <ul>
+            <li class="nav-item"><a href="#services">SERVICIOS</a></li>
+            <li class="nav-item"><a href="#support">ASISTENCIA</a></li>
+            <a href="/index.html"><li id="logo"><img src="/logo/main-logo-white-transparent-V02.png" alt="logo-black/png"/></li><h2 id="title-company">Btwo Tech</h2></a>
+            <li class="nav-item"><a href="#products">PRODUCTOS</a></li>
+            <li class="nav-item"><a href="#innovation">INNOVACION</a></li>
+            <!-- <li> </li> -->
+        </ul>
+        </nav>
+
+        <div id="menu-oculto">
+            <ul class="menu-oculto">
+                <a href="#services"><li class="nav-item02" onclick="removeNav()"><h2>SERVICIOS</h2></li></a>
+            <a href="#support"><li class="nav-item02" onclick="removeNav()"><h2>ASISTENCIA</h2></li></a>
+
+            <ul class="sub-menu-oculto" onclick="showSubmenuProducts()"><h3>PODUCTOS</h3> 
+                <div class="container-arrows" id="container-arrows">
+                    <div class="arrows" id="arrows" onclick="removeSubmenuProducts()">
+                <div class="arrow" id="arrow-down">
+                    <img src="/navegation/flecha-hacia-abajo-para-navegar.png" alt="Desplegar sublista de productos">
+                </div>
+                <div class="arrow" id="arrow-up" >
+                    <img src="/navegation/flecha-hacia-arriba-para-navegar.png" alt="Sublista de productos desplegada">
+                </div>
+            </div>
+
+
+                <div class="items-submenu-products" id="items-submenu-products">
+                <a href="#pM"><li class="nav-item03" onclick="removeNav()"><h2>Placas madre</h2></li></a>
+                <a href="#pC"><li class="nav-item03" onclick="removeNav()"><h2>Procesadores</h2></li></a>
+                <a href="#pR"><li class="nav-item03" onclick="removeNav()"><h2>Memorias RAM</h2></li></a>
+            </div>
+        </div>
+            </ul>
+            <a href="#innovation"><li class="nav-item02" onclick="removeNav()"><h2>INNOVACION</h2></li></a>
+        </ul>
+        <div class="button-close-nav" id="button-close-nav" onclick="removeNav()">
+            <img src="/navegation/cancel-button_83972.png" alt="Open button" class="close-nav-list">
+        </div>
+    </div>
+    <div class="button-open-nav" id="button-open-nav" onclick="showNav()">
+        <img src="/navegation/menu-bar_9046112.png" alt="Open button" class="open-nav-list">
+    </div>
+    <div class="status-bar" id="statusBar"></div>
+    </header>
+    <section id="home">
+                <!-- Sides -->
+                <div class="sides">
+                    <div class="rightS">
+                        <a href="#categories">
+                        <h2>CATALOGO COMPLETO</h2>
+                    </a>
+            </div>
+            </div>
+            <div class="text-home">
+                    <p><span><b>Somos una compañia tecnologica lider en componentes y soporte infórmatico.</b></span></p>
+                    <br/>
+                        <p>Contamos con 7 años de experiencia en el mercado nacional. Estamos
+                        dispuestos a ofrecer
+                        una visión global para el tratamiento
+                        de sus necesidades.
+                    </p>
+            </div>
+            <div class="container-eslogan">
+                <div class="img-slogan">
+                <img src="/images/home/eslogan/line-curve.png" alt="Lineas eslogan">
+            </div>
+                <div class="eslogan">
+                    <h3>NO TIME NO WAITING</h3>
+                </div>
+            </div>
+        <!-- Linea horizontal a 
+        <div class="linear"></div>
+        -->
+
+
+        <!-- Hexagons images -->
+        <div class="images-home" id="imagesHome">
+            <div class="ih-02" id="imgs-carrusel">
+                <a href="#services"><h4 class="title-services-carrusel">SERVICIOS</h4>
+                    <img class="img-h" src="/images/home/hexa/C-01.png" alt="Imagen servicios"/>
+                </a>
+                <a href="#support"><h4 class="title-services-carrusel">ASISTENCIA</h4>
+                    <img class="img-h" src="/images/home/hexa/C-02.png" alt="Imagen asistencia"/>
+                </a>
+                <a href="#products"><h4 class="title-services-carrusel">PRODUCTOS</h4>
+                    <img class="img-h" src="/images/home/hexa/C-03.png" alt="Imagen productos"/>
+                </a>
+                <a href="#innovation"><h4 class="title-services-carrusel">INNOVACION</h4>
+                    <img class="img-h" src="/images/home/hexa/C-04.png" alt="Imagen innovación"/>
+                </a>
+        </div>
+        </div>
+
+
+    </section>
+
+    <section id="categories">
+        <h2 class="intro-text">NUESTRO CATALOGO</h2>
+
+        <div class="boxes">
+            <h3>Te<br/>Ofrecemos</h3>
+            <a href="#products">
+                <div class="box-01 bh" onmouseenter="showInfoServices01()"> 
+                    <h4>PRODUCTOS</h4>
+                    <P>9<span class="serv-01" id="bh-01">REFERENCIAS</span><p>
+                </div>
+            </a>
+            <a href="#services">
+                <div class="box-02 bh" onmouseenter="showInfoServices02()">
+                    <h4>SERVICIOS</h4>
+                    <p>3<span class="serv-02" id="bh-02">SERVICES</span><p>
+                </div>
+            </a>
+
+            <a href="#support">
+                <div class="box-03 bh" onmouseenter="showInfoServices03()">
+                    <h4>ASISTENCIA</h4>
+                    <p>24<span class="serv-03" id="bh-03">HORAS</span><p>
+                </div>
+            </a>
+
+            <a href="#s-04-sobreNosotros">
+                <div class="box-04 bh" onmouseenter="showInfoServices04()">
+                    <h4>SOBRE NOSOTROS</h4>
+                    <p>7<span class="serv-04" id="bh-04">AÑOS</span></p>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+        <h2 class="intro-text">PRODUCTOS</h2>
+        <!-- Categories -->
+        <div class="section-all">
+            <ul class="se-a">
+                <a href="#pM">
+                    <li>PLACAS MADRE</li>
+                </a>
+                <a href="#pC">
+                    <li>PROCESADORES</li>
+                </a>
+                <a href="#pR">
+                    <li>MEMORIA RAM</li>
+                </a>
+            </ul>
+        </div>
+
+
+        <!-- Main Boards -->
+    <div class="list-products">
+        <div class="title-type">
+            <h1>PLACAS MADRE</h1>
+        </div>
+            <div class="product" id="pM">
+                <div class="container-img-pdt" onmousemove="zoom()" onmouseout="removeZoom()">
+                <img src="https://asset.msi.com/resize/image/global/product/product_8_20190708134930_5d22d96aeb5df.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="Placa madre MSI B450 PRO-VDH MAX" class="img-product" id="img-product" onclick="zoom02()" onmouseout="resize()">
+                </div>
+                <div class="filter" id="filter-pdt"></div>
+                <div class="filter-02" id="filter-pdt-02"></div>
+                <div class="description-products">
+                    <p class="name-C">MSI</p>
+                    <p class="name-R">B450M PRO-VDH MAX</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                        <div class="charts">
+                                <p>▿ Socket AM4 para procesador AMD Ryzen (1a a 3a generación) y Athlon GE.</p>
+                                <p>▿ Memoria DDR4 de 4 ranuras 3866 MHz (OC) de doble canal (capacidad total: 64 GB).</p>
+                                <p>▿ 4 x SATA 6Gbit/s, 1x M.2 PCIe NVMe 4x / SATA 6 Gbit/s.</p>
+                                <p>▿ 1 PCI-Express 3.0 16x slot.</p>
+                        </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <P>$ 1.157.000 <span>COP</span></P>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="product mobo-top">
+                    <div class="container-img-pdt" onmousemove="zoom()" onmouseout="removeZoom()">
+                        <img src="https://dlcdnwebimgs.asus.com/gain/8E88DC59-A399-4385-8BCB-C3877F4EB746/w717/h525" alt="Placa madre ASUS ROG Maximus Z790 Extreme" class="img-product" id="img-product" onclick="zoom02()" onmouseout="resize()">
+                        </div>
+                        <div class="filter" id="filter-pdt"></div>
+                        <div class="filter-02" id="filter-pdt-02"></div>
+                <div class="description-products">
+                    <p class="name-C">ASUS</p>
+                    <p class="name-R">ROG Maximus Z790 Extreme</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                        <div class="charts">
+                            <p>▿ Socket LGA1700.</p>
+                                <p>▿ Z790 Chipset.</p>
+                                <p>▿ 4 x DIMM, Max. 192GB, DDR5 7800.</p>
+                                <p>▿ 2 x PCIe 5.0 x16 slots.</p>
+                                <p>▿ Wi-Fi 6E.</p>
+                                <p>▿ 1 x ThunderboltTM.</p>
+                        </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <p>$ 2.263.471 <span>COP</span></P>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="container-img-pdt" onmousemove="zoom()" onmouseout="removeZoom()">
+                    <img src="https://www.mrpc.com.co/wp-content/uploads/2023/06/A520M-HDVM2.png" alt="Placa madre ASROCK A520M-HDV" class="img-product" id="img-product" onclick="zoom02()" onmouseout="resize()">
+                    </div>
+                    <div class="filter" id="filter-pdt"></div>
+                    <div class="filter-02" id="filter-pdt-02"></div>
+                <div class="description-products">
+                    <p class="name-C">ASROCK</p>
+                    <p class="name-R">A520M-HDV</p>
+                    <div class="ch">
+                    <h3 class="characteristics">CARACTERISTICAS</h3>
+                    <div class="charts">
+                            <p>▿ Socket AMD AM4 RyzenTM 3000, 3000.</p>
+                                <p>▿ Soporta memoria DDR4 4733+ (OC).</p>
+                                <p>▿ 4 x DIMM, Max. 192GB, DDR5 7800.</p>
+                                <p>▿ 1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1.</p>
+                                <p>▿ Audio 7.1.</p>
+                                <p>▿ 4 x SATA3, 1 x Ultra M.2(Gen3 x4 & SATA3) • 6 x USB 2.0(2 x Rear, 4 x Front).</p>
+                    </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <P>$ 2.263.471 <span>COP</span></P>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+        <!-- CPUs  -->
+        <div class="title-type">
+            <h1>PROCESADORES</h1>
+        </div>
+        <div class="list-products l-cpus " id="pC">
+            <div class="product cpus-p">
+                <img src="https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_SX679_.jpg" alt="MOBO-01">
+                <div class="description-products">
+                    <p class="name-C">AMD</p>
+                    <p class="name-R">RYZEN 7 7800X3D</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                        <div class="charts">
+                                <p>▿ Zócalo de CPU Socket AM5.</p>
+                                <p>▿ Modelo de gráficos: AMD RadeonTM Graphics, 2 Core, 2200 MHz.</p>
+                                <p>▿ # de núcleos de CPU: 8.</p>
+                                <p>▿ # de hilos: 16.</p>
+                                <p>▿ Reloj de aumento máx.: Hasta 5.0GHz. Reloj base: 4.2GHz.</p>
+                                <p>▿ TDP predeterminado: 120W.</p>
+                    </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <p>$ 745,990 <span>COP</span></P>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <div class="product cpus-p cpu-top">
+                <img src="https://m.media-amazon.com/images/I/61jRMCAX4CL._AC_SX679_.jpg" alt="MOBO-02">
+                <div class="description-products">
+                    <p class="name-C">INTEL</p>
+                    <p class="name-R">CORE i9-14900K</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                    <div class="charts">
+                                <p>▿ Zócalo de CPU Socket LGA 1700.</p>
+                                <p>▿ # de núcleos 24.</p>
+                                <p>▿ # de Efficient-cores 16.</p>
+                                <p>▿ Frecuencia turbo máxima 6 GHz.</p>
+                                <p>▿ Total de subprocesos 32.</p>
+                                <p>▿ Frecuencia de la Tecnología Intel® Turbo Boost Max 3.0 + 5.8 GHz</p>
+                    </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <P>$ 1.288.004 <span>COP</span></P>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+
+            <div class="product cpus-p">
+                <img src="https://m.media-amazon.com/images/I/71S4Zxo0yrL._AC_SY450_.jpg" alt="MOBO-03">
+                <div class="description-products">
+                    <p class="name-C">AMD</p>
+                    <p class="name-R">RYZEN 3 4100</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                    <div class="charts">
+                                <p>▿ Zócalo de CPU Socket AM4.</p>
+                                <p>▿ Número de núcleos: 4.</p>
+                                <p>▿ Número de hilos: 8.</p>
+                                <p>▿ Frecuencia: 3,8GHz hasta 4,0GHz.</p>
+                                <p>▿ Memoria: DDR4 hasta 3200Mhz.</p>
+                    </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <P>$ 450.990 <span>COP</span></P>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+        <!-- RAMs -->
+        <div class="title-type">
+            <h1>MEMORIAS RAM</h1>
+        </div>
+        <div class="list-products bg-ram" id="pR">
+            <div class="product ram-p">
+                <img src="https://webapi3.adata.com/storage/product/正面_v3_拷貝.jpg" alt="MOBO-01">
+                <div class="description-products">
+                    <p class="name-C">ADATA XPG</p>
+                    <p class="name-R">SPECTRIX D41</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                    <div class="charts">
+                                <p>▿ Tipo de memoria DDR4.</p>
+                                <p>▿ Memoria con formato UDIMM.</p>
+                                <p>▿ Cuenta con una tasa de transferencia de 25600 MB/s.</p>
+                                <p>▿ Apta para computadoras de escritorio.</p>
+                                <p>▿ Latencias CAS: 16</p>
+                                <p>▿ Alcanza una velocidad de 3200 MHz.</p>
+                    </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <p>$ 2.021.990 <span>COP</span></P>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+            <div class="product ram-p r-top">
+                <img src="https://d1q3zw97enxzq2.cloudfront.net/images/DOMINATOR_TITANIUM_RG.width-1000.bgcolor-000.format-jpeg_nPGlLoD.jpg"
+                    alt="MOBO-02">
+                <div class="description-products">
+                    <p class="name-C">CORSAIR</p>
+                    <p class="name-R">DOMINATOR TITANIUM</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                        <div class="charts">
+                                <p>▿ Tipo de memoria: DDR5.</p>
+                                <p>▿ Variantes de color: Negro / Blanco (Intel XMP) y Gris frío (AMD EXPO).</p>
+                                <p>▿ Difusor de calor: Aluminio.</p>
+                                <p>▿ Iluminación LED: RGB.</p>
+                                <p>▿ Formato de memoria: DIMM.</p>
+                                <p>▿ Velocidad de memoria 5600 MHz.</p>
+                        </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <P>$ 225.990 <span>COP</span></P>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            
+
+            <div class="product ram-p">
+                <img src="https://media.kingston.com/kingston/product/FURY_Renegade_Black_DDR4_1-zm-lg.jpg"
+                    alt="MOBO-03">
+                <div class="description-products">
+                    <p class="name-C">KINGSTON</p>
+                    <p class="name-R">FURY RENEGADE</p>
+                    <div class="ch">
+                        <h3 class="characteristics">CARACTERISTICAS</h3>
+                        <div class="charts">
+                                <p>▿ Tipo de memoria: DDR4.</p>
+                                <p>▿ Capacidades Individuales: Kit de 4: 32 GB, 64 GB, 128 GB Kit de 8: 256 GB.</p>
+                                <p>▿ Latencias: CL16, CL18, CL19.</p>
+                                <p>▿ Tensión: 1,35 V, 1,4 V, 1,5 V.</p>
+                                <p>▿ Temperatura de servicio: 0 °C a 70 °C.</p>
+                                <p>▿ Velocidades: 3600 MT/s, 4000 MT/s, 4266 MT/s, 4600 MT/s.</p>
+                    </div>
+                    <div class="t-pasta">
+                        <div class="title-precio">
+                            <h6>PRECIO</h6>
+                        </div>
+                    <div class="bills">
+                        <P>$ 1.100.990 <span>COP</span></P>
+                    </div>
+                </div>
+        </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="services">
+        <h2 class="intro-text">SERVICIOS</h2>
+        <div class="services-flex">
+            <div class="serv s-01" onmouseenter="showInfo01()" onclick="closeInfo()">
+                <div class="content-services">
+                <img src="https://econsultora.com.ar/wp-content/uploads/2021/10/Social-strategy.gif"
+                    class="img-service01 img-s" alt="Imagen outsourcing"/>
+                <p>Con este servicio las empresas
+                    tendrán la oportunidad de tener
+                    su información y equipos de
+                    cómputo al día sin necesidad de
+                    crear un departamento de
+                    sistemas propio, y podrán
+                    ahorrar los costos fijos que este
+                    tipo de departamentos genera.
+                </p>
+                <h2>OUT<br>SOURCING</h2>
+            </div>
+                <div  class="info-serv" id="desp-list-s01">
+                    <h3>Incluye</h3>
+                    
+                    <p>Configuraciones: configuración de toda clase de dispositivos, equipos,
+                        routers, servidores, impresoras para que se comuniquen con otros |
+                        dispositivos
+                    </p>
+                    <p>Mantenimientos: Realizamos reparaciones, actualizaciones limpiezas,
+                        revisiones, instalaciones, verificaciones, rewvisiones y evaluaciones de
+                        sus redes y equipos de computo.
+                    </p>
+                    <p>Reparaciones: Realizamos diagnosticos, reemplazos, pruebas de
+                        funcionamiento, y optimizacion de equipos.
+                    </p>
+                    <p>
+                        Instalacion: Intalacion de cableado estructurado y redes de datos, y
+                        adecuacion de nuevos puestos de trabajo.
+                    </p>
+                    <p>Proporcionamos asistencia remota, configuraciones,
+                        personalizaciones, solución y resolucion de problemas, capacitaciones,
+                        copias de seguridad, actualizaciones y mejoras a tecnologias de :
+                        información.
+                    </p>
+                </div>
+            </div>
+            <div class="serv s-02" onmouseenter="showInfo02()">
+                <div class="content-services">
+                <img src="https://www.un.edu.mx/wp-content/uploads/2023/03/Universidad-del-Norte-Que-es-la-administracion-de-ingenieria-Vale-la-pena-obtener-un-titulo-en-administracion-de-ingenieria-subtitulo.png"
+                    class="img-service01 img-s" alt="s/img" />
+                <p>
+                    Nuestra compañia se enfrenta a
+                    nuevos retos cada día, cambios
+                    en la normatividad, en los
+                    requisitos y en los procesos, son
+                    algunos de factores que nos han
+                    impulsado a prepararnos y
+                    especializarnos para poder
+                    ofrecer profesionales altamente
+                    capacitados.
+                </p>
+                <h2>INGENIERIA</h2>
+            </div>
+                <div  class="info-serv" id="desp-list-s02">
+                    <h3>Incluye</h3>
+                    
+                    <p>Configuración de toda clase de dispositivos, equipos,
+                        routers, servidores, impresoras para que se comuniquen con otros
+                        dispositivos.</p>
+
+                    <p>Reparaciones, actualizaciones limpiezas,
+                        revisiones, instalaciones, verificaciones, revisiones y evaluaciones de
+                        sus redes y equipos de computo.</p>
+
+                    <p>Diagnósticos, reemplazos, pruebas de
+                        funcionamiento, y optimizacion de equipos.</p>
+
+                    <p>Instalación de cableado estructurado, y
+                        adecuación de nuevos puestos de trabajo.</p>
+
+                    <p>Asistencia remota, configuraciones,
+                        personalizaciones, solución y resolución de problemas, capacitaciones,
+                        copias de seguridad, actualizaciones y mejoras a tecnologías de 
+                    información.</p>
+                </div>
+            </div>
+            <div class="serv s-03" onmouseenter="showInfo03()" onclick="closeInfo()">
+                <div class="content-services">
+                <img src="https://st4.depositphotos.com/18434074/28352/v/450/depositphotos_283523310-stock-illustration-webpage-under-construction.jpg"
+                    class="img-service01 img-s" alt="s/img" />
+                <p>
+                    Nuestro servicio de soporte y
+                    mantenimiento es totalmente
+                    integro. <br/>
+                      Dar prioridad a las
+                    funciones de este cargo es el
+                    objetivo más importante.
+                </p>
+                <h2>TECNICOS</h2>
+            </div>
+                <div  class="info-serv" id="desp-list-s03">
+                    <h3>Incluye</h3>
+                    
+                    <p>Configuraciones: configuración de toda clase de dispositivos, equipos,
+                        routers, servidores, impresoras para que se comuniquen con otros |
+                        dispositivos
+                    </p>
+                    <p>Mantenimientos: Realizamos reparaciones, actualizaciones limpiezas,
+                        revisiones, instalaciones, verificaciones, rewvisiones y evaluaciones de
+                        sus redes y equipos de computo.
+                    </p>
+                    <p>Reparaciones: Realizamos diagnosticos, reemplazos, pruebas de
+                        funcionamiento, y optimizacion de equipos.
+                    </p>
+                    <p>
+                        Instalacion: Intalacion de cableado estructurado y redes de datos, y
+                        adecuacion de nuevos puestos de trabajo.
+                    </p>
+                    <p>Proporcionamos asistencia remota, configuraciones,
+                        personalizaciones, solución y resolucion de problemas, capacitaciones,
+                        copias de seguridad, actualizaciones y mejoras a tecnologias de :
+                        información.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="support">
+        <h2 class="intro-text">ASISTENCIA</h2>
+        <div class="img-asistant">
+        <img src="/images/support/gradient-ai-alignment-illustration.png" alt="Imagen soporte por IA" loading="lazy">
+    </div>
+        <div class="spp">
+        <div class="spp-02">
+            <div class="spp-images"><img src="/images/support/help-chat_15792502.png" alt="Imagen soporte">
+                <p>Soporte <span>24/7</span><br/> pedir ayuda</p>
+            </div>
+
+            <div class="spp-images"><img src="https://cdn-icons-png.flaticon.com/512/5676/5676289.png" alt="location">
+                <p>Asistencia en punto</p>
+            </div>
+            <div class="spp-images"><img src="/images/support/faq.png" alt="questions">
+                <p>Preguntas frecuentes</p>
+            </div>
+            <div class="spp-images"><img src="/images/support/business.png" alt="message">
+                <p>Reportar problema</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Innovation -->
+     <section id="innovation">
+        <h2 class="intro-text">INNOVACION</h2>
+    <div class="img-width">
+        <div class="i-w">
+            <img src="/images/ux/realidad-virtual.jpg" class="i-width" id="iWidth" alt="Realidad virtual">
+        </div>
+    </div>
+</section>
+<a href="/index.html"><div id="back"><img src="/navegation/flecha-hacia-arriba-sobre-un-fondo-de-circulo-negro.png" alt="Volver"></div></a>
+    <section id="s-04-sobreNosotros">
+        <h2 class="intro-text">NUESTRO EQUIPO</h2>
+        <!-- <div class="title-section">
+<h4>INTEGRANTES</h4>
+</div> -->
+        <!-- Photos -->
+        <div class="photos">
+            <div class="p-01">
+                <img src="/photos/Alejandro.jpg" class="photos-img" alt="photo-01" />
+                <div class="name-u">
+                    <p>ALEJANDRO BEDOYA</p>
+                </div>
+            </div>
+            <div class="p-01">
+                <img src="/photos/Dayuth-.jpg" class="photos-img" alt="photo-02" />
+                <div class="name-u">
+                    <p>DAYUTH CHACON</p>
+                </div>
+            </div>
+            <div class="p-01">
+                <img src="/photos/Jorge-.jpg" class="photos-img" alt="photo-02" />
+                <div class="name-u">
+                    <p>JORGE HORMAZA</p>
+                </div>
+            </div>
+            <!-- <div class="p-01">
+        <div class="name-u">
+        <p>MIGUEL BOBADILLA</p>
+    </div>
+    </div> -->
+        </div>
+
+        <div class="created">
+            <div class="c-img">
+                <p>ESTA PAGINA WEB <br>FUE CREADA HACIENDO <br>USO DE</p>
+                <img src="/created-img/HTML.svg" class="created-icons" alt="Icono HTML" title="HTML" />
+                <img src="/created-img/CSS3-svg.svg" class="created-icons" alt="Icono CSS" title="CSS" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" class="created-icons" alt="Icono Javascript" title="JAVASCRIPT"/>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+        <div class="TX">
+            <div class="TX-text">
+                <P>Creations By <a href="https://www.tecnimux.com"><span><strong>TECNIMUX</strong></span></a></P>
+            </div>
+        </div>
+        <div class="content-footer">
+            <div class="cf">
+                <p>ALL RIGHTS RESERVED &copy</p>
+                <P>carrera 80a·10a-34 Bogotá Colombia
+                    <br>
+                    Cel: (+57) 3013404704-3008380307-
+                    3232274433
+                    <br>
+                    btwotech@gmail.com
+                    <br>
+                </P>
+                <a href="https://btwotech.netlify.app">
+                    <p>btwotech.netlify.app</p>
+                </a>
+            </div>
+        </div>
+        <div class="logo-footer">
+            <div>
+                <a href="https://btwotech.netlify.app">
+                    <img src="/logo/main-logo-white-transparent.png" class="logo-img-footer" alt="footer/img" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>
